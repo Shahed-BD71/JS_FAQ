@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Events</title>
+</head>
+<body>
+    <h1 onclick="handleClick()">Hello Bitch</h1>
+    <!-- <button onmouseover="handleClick()">Click me</button> -->
+    <button id="first">Clickme-1</button>
+    <button>Clickme-2</button>
+    <button id="third">Clickme-3</button>
+</body>
+<script>
+    // function handleClick() {
+    // console.log('someone click me');
+    // }
+
+document.getElementById('first').addEventListener('click', function(){
+    document.body.style.color = 'red'
+})
+
+function handleClick(){
+    document.body.style.backgroundColor = 'yellow';
+}
+var thirdBtn = document.getElementById('third');
+thirdBtn.addEventListener('click', handleClick)
+</script>
+</html>
